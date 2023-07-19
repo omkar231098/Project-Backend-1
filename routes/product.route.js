@@ -9,8 +9,8 @@ const { authenticate } = require("../middlewares/authenticator");
 productRouter.get("/",async (req, res) => {
   
   
-  const token = req.headers.authorization;
-  const decoded = jwt.verify(token, "masai");
+  // const token = req.headers.authorization;
+  // const decoded = jwt.verify(token, "masai");
   try {
     const product = await ProductModel.find();  //{userID:decoded.userID}
     res.status(200).send(product);
